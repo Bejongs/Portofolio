@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@source "./pages/**/*.html";
+
+@layer base {
+  body {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .ambient-blob {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(50px);
+    opacity: 0.22;
+    pointer-events: none;
+    animation: blob-float 10s ease-in-out infinite;
+  }
+
+  .blob-1 {
+    width: 320px;
+    height: 320px;
+    top: -80px;
+    right: -40px;
+    background: #34d399;
+  }
+
+  .blob-2 {
+    width: 260px;
+    height: 260px;
+    left: -100px;
+    top: 260px;
+    background: #22d3ee;
+    animation-delay: 1.4s;
+  }
+
+  .glass-card {
+    transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgb(52 211 153 / 0.45);
+    box-shadow: 0 14px 34px rgb(8 47 73 / 0.35);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 560ms ease, transform 560ms ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 680ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-fade-up-2 {
+    animation: fade-up 680ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+  }
+
+  .animate-soft-float {
+    animation: soft-float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes blob-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(10px, -12px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-blob,
+  .glass-card,
+  .reveal,
+  .animate-fade-up,
+  .animate-fade-up-2,
+  .animate-soft-float {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
