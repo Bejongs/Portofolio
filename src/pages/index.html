@@ -18,19 +18,45 @@
       <header class="border-b border-white/10">
         <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
           <div class="text-lg font-semibold tracking-wide">Bima Portofolio</div>
-          <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
-            <a class="transition hover:text-white" href="./index.html">Tentang</a>
-            <a class="transition hover:text-white" href="./projects.html">Proyek</a>
-            <a class="transition hover:text-white" href="./services.html">Layanan</a>
-            <a class="transition hover:text-white" href="./certificates.html">Sertifikat & Skill</a>
-            <a class="transition hover:text-white" href="./contact.html">Kontak</a>
+          <div class="flex items-center gap-3">
+            <nav class="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex">
+              <a class="transition hover:text-white" href="./index.html">Tentang</a>
+              <a class="transition hover:text-white" href="./projects.html">Proyek</a>
+              <a class="transition hover:text-white" href="./services.html">Layanan</a>
+              <a class="transition hover:text-white" href="./certificates.html">Sertifikat & Skill</a>
+              <a class="transition hover:text-white" href="./contact.html">Kontak</a>
+            </nav>
+            <a
+              class="hidden rounded-full border border-emerald-400/40 px-4 py-2 text-sm font-semibold text-emerald-200 transition hover:border-emerald-300 hover:text-white md:inline-flex"
+              href="https://wa.me/6285348067930?text=Halo%20Bima%2C%20saya%20ingin%20diskusi%20project."
+            >
+              Hire Me
+            </a>
+            <button
+              type="button"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 text-slate-200 transition hover:border-emerald-300/50 hover:text-white md:hidden"
+              data-menu-button
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+            >
+              <svg data-menu-open xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg data-menu-close xmlns="http://www.w3.org/2000/svg" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="mx-auto hidden w-full max-w-6xl px-6 pb-4 md:hidden" data-menu-panel>
+          <nav class="grid gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-3 text-sm font-medium text-slate-200 backdrop-blur">
+            <a class="rounded-lg px-3 py-2 transition hover:bg-white/10" href="./index.html">Tentang</a>
+            <a class="rounded-lg px-3 py-2 transition hover:bg-white/10" href="./projects.html">Proyek</a>
+            <a class="rounded-lg px-3 py-2 transition hover:bg-white/10" href="./services.html">Layanan</a>
+            <a class="rounded-lg px-3 py-2 transition hover:bg-white/10" href="./certificates.html">Sertifikat & Skill</a>
+            <a class="rounded-lg px-3 py-2 transition hover:bg-white/10" href="./contact.html">Kontak</a>
+            <a class="mt-1 rounded-lg bg-emerald-300 px-3 py-2 text-center font-semibold text-slate-950 transition hover:bg-emerald-200" href="https://wa.me/6285348067930?text=Halo%20Bima%2C%20saya%20ingin%20diskusi%20project.">Hire Me</a>
           </nav>
-          <a
-            class="rounded-full border border-emerald-400/40 px-4 py-2 text-sm font-semibold text-emerald-200 transition hover:border-emerald-300 hover:text-white"
-            href="https://wa.me/6285348067930?text=Halo%20Bima%2C%20saya%20ingin%20diskusi%20project."
-          >
-            Hire Me
-          </a>
         </div>
       </header>
 
